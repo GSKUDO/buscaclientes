@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Clientes</title>
+        <meta charset="tuf-8" lang="pt-br">
+    </head>
+    <body>
+        <div id="cadastro">
+            <h1>Cadastro de Clientes</h1>
+            <form action="get" id="formcadastro">
+                <label for="fname">Nome:</label><br>
+                <input type="text" id="cadastranome" name="fname" placeholder="nome"><br>
+                <label for="fname">Email:</label><br>
+                <input type="email" id="cadastraemail" name="fname" placeholder="email"><br>
+                <input type="button" value="Cadastrar" onclick="incluircliente()">
+            </form>
+        </div>
+            <br>
+        <div id="busca">
+            <h1>Buscar Cliente:</h1>
+            <form action="get" id="formbusca">
+                <input type="radio" id="buscanome" name="fbusca" value="nome">
+                <label for="buscanome">Nome</label><br>
+                <input type="radio" id="buscaemail" name="fbusca" value="email">
+                <label for="buscaemail">Email</label><br>
+                <input type="radio" id="buscaID" name="fbusca" value="ID">
+                <label for="buscaID">ID</label><br>
+                <input type="text" id="campobusca" name="fbusca" placeholder="Digite sua Busca:"><br>
+                <input type="button" value="Buscar" onclick="buscarcliente()">
+            </form>
+        </div>
+        <br>
+        <h1>Cliente:</h1>
+        <table id="tblista">
+            <thead>
+                <tr>
+                    <th>Indice</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <br/>
+        <script src="buscacliente.js"></script>
+    </body>
+</html>
